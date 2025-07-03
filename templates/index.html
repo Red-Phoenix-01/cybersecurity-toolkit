@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cybersecurity Toolkit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+</head>
+<body>
+
+    <div class="toggle-container">
+        <button onclick="toggleTheme()" title="Toggle light/dark mode">
+            🌗 Toggle Theme
+        </button>
+    </div>
+
+    <h1>Cybersecurity Toolkit 🔐</h1>
+
+    <div class="tooltip">
+        <label for="tool"><i class="fas fa-tools"></i> Choose a Tool:</label>
+        <span class="tooltiptext">Select what kind of check you want to run</span>
+    </div>
+
+    <select id="tool">
+        <option value="phishing">📩 Phishing Detector</option>
+        <option value="url">🌐 URL Scanner</option>
+        <option value="vuln">🛠 Vulnerability Scanner</option>
+    </select>
+
+    <textarea id="inputBox" placeholder="Paste email, URL, or IP/domain here..."></textarea>
+
+    <!-- ✅ Centered Analyze Button -->
+    <div class="button-container">
+        <button onclick="analyze()">Analyze</button>
+    </div>
+
+    <div id="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p>Analyzing...</p>
+    </div>
+
+    <div id="resultBox"></div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
