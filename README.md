@@ -27,22 +27,23 @@ Built with ❤️ using Python, HTML, CSS, and JavaScript.
 
 ## 🗂️ Project Structure
 
-
-Cybersecurity-Toolkit
-│   app.py
-│   phishing.py
-│   url_scan.py
-│   vuln_scan.py
-│   requirements.txt
+```
+Cybersecurity-Toolkit/
+├── app.py               # Main Flask app
+├── phishing.py          # Phishing detection logic
+├── url_scan.py          # URL scanning logic
+├── vuln_scan.py         # Port scanner
+├── requirements.txt     # Python dependencies
 │
-├───static
-│   ├───css
-│   │       style.css
-│   └───js
-│           script.js
+├── templates/
+│   └── index.html       # Frontend HTML
 │
-└───templates
-        index.html
+└── static/
+    ├── css/
+    │   └── style.css    # Styles
+    └── js/
+        └── script.js    # JavaScript (theme, voice, fetch)
+```
 
 
 
