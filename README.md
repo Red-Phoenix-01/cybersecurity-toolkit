@@ -16,6 +16,13 @@ Built with ❤️ using Python, HTML, CSS, and JavaScript.
 
 ---
 
+## 🌐 Live Demo
+
+[Click here to use the app](https://cyber-toolkit.onrender.com)
+
+⚠️ First load may take 20–50 seconds due to free server cold start.
+
+
 ## 🚀 Features
 
 - ⚡ Clean, responsive UI with light/dark mode toggle  
