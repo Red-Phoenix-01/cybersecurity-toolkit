@@ -28,7 +28,6 @@ Built with ❤️ using Python, HTML, CSS, and JavaScript.
 ## 🗂️ Project Structure
 
 
-
 Cybersecurity-Toolkit
 │   app.py
 │   phishing.py
@@ -44,6 +43,7 @@ Cybersecurity-Toolkit
 │
 └───templates
         index.html
+
 
 
 ---
