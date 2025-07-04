@@ -1,6 +1,12 @@
 function analyze() {
   const tool = document.getElementById('tool').value;
-  const data = document.getElementById('inputBox').value;
+  const data = document.getElementById('inputBox').value.trim(); // ✅ trim whitespace
+
+  // ❌ Prevent analyzing empty input
+  if (data === "") {
+    alert("⚠️ Please enter something to analyze.");
+    return;
+  }
 
   // 🌐 Extra validation for vuln scanner
   if (tool === "vuln" && data.length > 100) {
@@ -35,6 +41,7 @@ function analyze() {
       }
     });
 }
+
 
 function speakResult(text) {
   if ('speechSynthesis' in window) {
