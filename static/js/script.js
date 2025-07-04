@@ -107,17 +107,3 @@ function updatePlaceholder() {
   }
 }
 
-// ✅ Run this when the page loads
-window.onload = function () {
-  updatePlaceholder();
-
-  // (Optional: Keep your voice greeting here too)
-  const hour = new Date().getHours();
-  let timeGreeting = "Hello";
-
-  if (hour < 12) timeGreeting = "Good morning";
-  else if (hour < 18) timeGreeting = "Good afternoon";
-  else timeGreeting = "Good evening";
-
-  speakResult(`${timeGreeting}, welcome to the Cybersecurity Toolkit. Let's get started.`);
-};
