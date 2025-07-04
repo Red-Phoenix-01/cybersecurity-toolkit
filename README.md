@@ -6,7 +6,7 @@ A voice-enhanced, dark-mode-friendly web app built with **Flask** for analyzing:
 - 🌐 Suspicious URLs  
 - 🛠️ Basic Vulnerability Port Scans  
 
-Built with ❤️ using Python, HTML, CSS, and JavaScript.
+Built with ❤️ using Python, Flak, HTML, CSS, and JavaScript.
 
 ---
 
@@ -21,17 +21,19 @@ Built with ❤️ using Python, HTML, CSS, and JavaScript.
 [🔗 Try the app](https://cybersecurity-toolkit-production.up.railway.app/)
 
 ✅ Always-on  
-✅ Hosted on Railway  
-✅ Built with Flask + JS + Cyber 🛡️
+💬Voice-Enabled
+🚄 Built with Flask + JS + Cyber 🛡️
 
 
 
 ## 🚀 Features
 
 - ⚡ Clean, responsive UI with light/dark mode toggle  
-- 🔊 Voice alerts and greeting for accessibility and style  
-- 🔐 Detect phishing phrases, suspicious URL patterns, and common open ports  
-- 🎯 Minimal setup, perfect for demos, portfolios, or security labs  
+- 🔊 **Voice greetings and alerts** using Web Speech API 
+- 🔐 Detects phishing content, suspicious URLs, and open ports 
+- 🎯 Minimal setup, perfect for demos, portfolios, or security labs 
+- 💡 Lightweight setup — perfect for demos, portfolios, or quick threat analysis 
+- 🧪 Built for hands-on cybersecurity awareness
 
 ---
 
@@ -62,18 +64,18 @@ Cybersecurity-Toolkit/
 ## 🛠️ Tech Stack
 
 - **Frontend**: HTML, CSS, JavaScript  
-- **Backend**: Python (Flask)  
-- **Deployment**: Render  
+- **Backend**: Python + Flask 
+- **Deployment**: Railway
 - **Voice Feature**: Web Speech API (JS)
 
 ---
 
 ## 🧠 Modules
 
-- `phishing.py`: Detects common phishing phrases in email text  
-- `url_scan.py`: Scans for suspicious keywords or malformed URLs  
-- `vuln_scan.py`: Scans basic open ports on given IP/domain  
-- `script.js`: Handles analyze action, voice feedback, and theme toggle  
+- `phishing.py`: Detects high-risk phrases used in phishing attempts  
+- `url_scan.py`: Scans URLs using **heuristics + VirusTotal API**  
+- `vuln_scan.py`: Scans for common exposed ports on target IP/domains  
+- `script.js`: Controls UI, fetch calls, voice feedback, and animations   
 
 ---
 
