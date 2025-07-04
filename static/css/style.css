@@ -108,27 +108,35 @@ button {
   opacity: 1;
 }
 
-/* ✅ Tool Info Section */
-.tool-info {
+/* ✅ Tool Info Panel (Bottom Section) */
+#tool-info {
   background-color: var(--result-bg);
-  border-left: 4px solid var(--highlight-color);
-  padding: 20px;
-  margin: 30px auto;
-  width: 80%;
-  text-align: left;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #00000030;
-  font-size: 16px;
   color: var(--text-color);
-}
-
-.tool-info h2,
-.tool-info h3 {
-  margin-top: 10px;
-  color: var(--highlight-color);
-}
-
-.tool-info p {
-  margin-bottom: 15px;
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 2px solid var(--highlight-color);
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  font-size: 16px;
   line-height: 1.6;
+}
+
+#tool-info h2 {
+  color: var(--highlight-color);
+  font-size: 20px;
+}
+
+#tool-info code {
+  background-color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  color: #fff;
+}
+
+#tool-info p {
+  text-align: left;
+  margin-bottom: 20px;
 }
