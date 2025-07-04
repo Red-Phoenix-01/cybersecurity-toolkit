@@ -54,15 +54,15 @@ function speakResult(text) {
 
 function toggleTheme() {
   const root = document.documentElement;
-  const toggleButton = document.querySelector('.toggle-container button');
+  const icon = document.querySelector('.toggle-icon');
   const currentBg = getComputedStyle(root).getPropertyValue('--bg-color').trim();
 
-  // Add animation class temporarily
-  toggleButton.classList.add('animate-toggle');
-  setTimeout(() => toggleButton.classList.remove('animate-toggle'), 500);
+  // Animate only the emoji icon
+  icon.classList.add('spin');
+  setTimeout(() => icon.classList.remove('spin'), 600);
 
   if (currentBg === '#0f0f0f') {
-    // Light Theme
+    // Light theme
     root.style.setProperty('--bg-color', '#f5f7fa');
     root.style.setProperty('--text-color', '#222222');
     root.style.setProperty('--input-bg', '#ebeff3');
@@ -70,7 +70,7 @@ function toggleTheme() {
     root.style.setProperty('--textarea-text', '#222222');
     document.body.style.backgroundImage = "radial-gradient(circle at center, #f5f7fa, #dbe3ea)";
   } else {
-    // Dark Theme
+    // Dark theme
     root.style.setProperty('--bg-color', '#0f0f0f');
     root.style.setProperty('--text-color', '#f2f2f2');
     root.style.setProperty('--input-bg', '#1a1a1a');
@@ -79,6 +79,7 @@ function toggleTheme() {
     document.body.style.backgroundImage = "radial-gradient(circle at center, #0f0f0f 0%, #050505 100%)";
   }
 }
+
 
 
 
