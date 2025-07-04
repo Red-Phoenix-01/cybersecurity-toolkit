@@ -1,14 +1,14 @@
 function analyze() {
   const tool = document.getElementById('tool').value;
-  const data = document.getElementById('inputBox').value.trim(); // ✅ trim whitespace
+  const data = document.getElementById('inputBox').value.trim();  // Removes spaces
 
-  // ❌ Prevent analyzing empty input
-  if (data === "") {
+  // ❌ Block analysis if input is empty
+  if (!data) {
     alert("⚠️ Please enter something to analyze.");
     return;
   }
 
-  // 🌐 Extra validation for vuln scanner
+  // 🌐 Validation for vuln scanner
   if (tool === "vuln" && data.length > 100) {
     alert("⚠️ The domain or IP is too long. Please enter a valid host like 'example.com' or '127.0.0.1'.");
     return;
