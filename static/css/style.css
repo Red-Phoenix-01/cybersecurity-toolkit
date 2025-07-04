@@ -13,7 +13,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
   padding: 20px;
-  transition: all 0.4s ease-in-out;
+  transition: background-color 0.4s ease, color 0.4s ease;
   background-image: radial-gradient(circle at center, #0f0f0f 0%, #050505 100%);
 }
 
@@ -26,6 +26,8 @@ textarea {
   border: 1px solid #555;
   font-size: 16px;
   padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -81,6 +83,21 @@ button {
   right: 20px;
 }
 
+.toggle-container button {
+  transition: transform 0.3s ease;
+}
+
+/* 🔁 Add animation when toggling */
+.toggle-container button.animate-toggle {
+  animation: rotateIcon 0.5s ease;
+}
+
+@keyframes rotateIcon {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
@@ -101,6 +118,7 @@ button {
   transform: translateX(-50%);
   opacity: 0;
   transition: 0.3s;
+  max-width: 250px;
 }
 
 .tooltip:hover .tooltiptext {
@@ -121,6 +139,8 @@ button {
   border-radius: 8px;
   font-size: 16px;
   line-height: 1.6;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 #tool-info h2 {
@@ -134,6 +154,11 @@ button {
   border-radius: 4px;
   font-family: monospace;
   color: #fff;
+}
+
+#tool-info p {
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 #tool-info p {
