@@ -57,15 +57,15 @@ function toggleTheme() {
   const currentBg = getComputedStyle(root).getPropertyValue('--bg-color').trim();
 
   if (currentBg === '#0f0f0f') {
-    // Switch to light theme
-    root.style.setProperty('--bg-color', '#e0f2ff');
-    root.style.setProperty('--text-color', '#0f0f0f');
-    root.style.setProperty('--input-bg', '#f0f0f0');
-    root.style.setProperty('--result-bg', '#ffffff');
-    root.style.setProperty('--textarea-text', '#000000');
-    document.body.style.backgroundImage = "radial-gradient(circle at center, #e0f2ff, #cce7f5)";
+    // 🎨 Soft Light Theme — more neutral and easy on eyes
+    root.style.setProperty('--bg-color', '#f5f7fa');         // soft background
+    root.style.setProperty('--text-color', '#222222');       // near-black text
+    root.style.setProperty('--input-bg', '#ebeff3');         // light neutral input
+    root.style.setProperty('--result-bg', '#ffffff');        // clean content
+    root.style.setProperty('--textarea-text', '#222222');    // matching dark text
+    document.body.style.backgroundImage = "radial-gradient(circle at center, #f5f7fa, #dbe3ea)";
   } else {
-    // Switch back to dark theme
+    // 🌑 Dark Theme (unchanged)
     root.style.setProperty('--bg-color', '#0f0f0f');
     root.style.setProperty('--text-color', '#f2f2f2');
     root.style.setProperty('--input-bg', '#1a1a1a');
@@ -74,6 +74,7 @@ function toggleTheme() {
     document.body.style.backgroundImage = "radial-gradient(circle at center, #0f0f0f 0%, #050505 100%)";
   }
 }
+
 
 // ✅ Voice greeting on page load based on time
 window.onload = function () {
