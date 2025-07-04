@@ -16,11 +16,14 @@ Built with ❤️ using Python, HTML, CSS, and JavaScript.
 
 ---
 
-## 🌐 Live Demo
+## 🚀 Live Demo
 
-[Click here to use the app](https://cyber-toolkit.onrender.com)
+[🔗 Try the app](https://your-app-url.up.railway.app)
 
-⚠️ First load may take 20–50 seconds due to free server cold start.
+✅ Always-on  
+✅ Hosted on Railway  
+✅ Built with Flask + JS + Cyber 🛡️
+
 
 
 ## 🚀 Features
