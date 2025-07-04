@@ -1,60 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Cybersecurity Toolkit</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <meta charset="UTF-8" />
+  <title>Cybersecurity Toolkit</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
 
-    <div class="toggle-container">
-        <button onclick="toggleTheme()" title="Toggle light/dark mode">
-            🌗 Toggle Theme
-        </button>
-    </div>
+  <div class="toggle-container">
+    <button onclick="toggleTheme()" title="Toggle light/dark mode">
+      🌗 Toggle Theme
+    </button>
+  </div>
 
-    <h1>Cybersecurity Toolkit 🔐</h1>
+  <h1>Cybersecurity Toolkit 🔐</h1>
 
-    <div class="tooltip">
-        <label for="tool"><i class="fas fa-tools"></i> Choose a Tool:</label>
-        <span class="tooltiptext">Select what kind of check you want to run</span>
-    </div>
+  <div class="tooltip">
+    <label for="tool"><i class="fas fa-tools"></i> Choose a Tool:</label>
+    <span class="tooltiptext">Select what kind of check you want to run</span>
+  </div>
 
-    <select id="tool">
-        <option value="url">🌐 URL Scanner</option>
-        <option value="phishing">📩 Phishing Detector</option>
-        <option value="vuln">🛠 Vulnerability Scanner</option>
-    </select>
+  <select id="tool" onchange="updatePlaceholder()">
+    <option value="url" selected>🌐 URL Scanner</option>
+    <option value="phishing">📩 Phishing Detector</option>
+    <option value="vuln">🛠 Vulnerability Scanner</option>
+  </select>
 
-    <textarea id="inputBox" placeholder="Paste email, URL, or IP/domain here..."></textarea>
+  <textarea id="inputBox" placeholder="e.g. 'https://bit.ly/secure-login'"></textarea>
 
-    <div class="button-container">
-        <button onclick="analyze()">Analyze</button>
-    </div>
+  <div class="button-container">
+    <button onclick="analyze()">Analyze</button>
+  </div>
 
-    <div id="loading" style="display: none;">
-        <div class="spinner"></div>
-        <p>Analyzing...</p>
-    </div>
+  <div id="loading" style="display: none;">
+    <div class="spinner"></div>
+    <p>Analyzing...</p>
+  </div>
 
-    <div id="resultBox"></div>
+  <div id="resultBox"></div>
 
-    <!-- 🔍 Tool Info Panel (Bottom of Page) -->
-    <div id="tool-info">
-        <h2>🧠 What Each Tool Does</h2>
+  <!-- 🔍 Tool Info Panel (Optional) -->
+  <div id="tool-info">
+    <h2>🧠 What Each Tool Does</h2>
+    <p><strong>🌐 URL Scanner</strong><br>
+    Detects shortening links, suspicious keywords, fake login domains, unusual ports, and sends them to VirusTotal for cross-checking.</p>
 
-        <p><strong>🌐 Malicious URL Scanner</strong><br>
-        Analyzes URLs for suspicious patterns like shortening services (<code>bit.ly</code>), fake login domains, uncommon ports, encoded payloads (like Base64), and typosquatting. Also integrates with <strong>VirusTotal</strong> to check live threat intelligence from 70+ security engines.</p>
+    <p><strong>📩 Phishing Email Detector</strong><br>
+    Detects scam phrases like “verify your account” or “login urgently” using pattern matching and scoring system.</p>
 
-        <p><strong>📩 Phishing Email Detector</strong><br>
-        Detects scam-like language used in phishing emails such as <em>“verify your account”</em>, <em>“click this link”</em>, or <em>“login urgently”</em>. Flags red-flag phrases to help identify suspicious content.</p>
+    <p><strong>🛠 Vulnerability Port Scanner</strong><br>
+    Scans target domains or IPs for open ports commonly used by services and attackers.</p>
+  </div>
 
-        <p><strong>🛠 Vulnerability Port Scanner</strong><br>
-        Scans an IP address or domain for commonly exposed ports (21, 22, 80, 443, etc.) to simulate basic vulnerability reconnaissance — helps detect potentially open services on a target.</p>
-    </div>
-
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
 
