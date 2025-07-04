@@ -54,18 +54,23 @@ function speakResult(text) {
 
 function toggleTheme() {
   const root = document.documentElement;
+  const toggleButton = document.querySelector('.toggle-container button');
   const currentBg = getComputedStyle(root).getPropertyValue('--bg-color').trim();
 
+  // Add animation class temporarily
+  toggleButton.classList.add('animate-toggle');
+  setTimeout(() => toggleButton.classList.remove('animate-toggle'), 500);
+
   if (currentBg === '#0f0f0f') {
-    // 🎨 Soft Light Theme — more neutral and easy on eyes
-    root.style.setProperty('--bg-color', '#f5f7fa');         // soft background
-    root.style.setProperty('--text-color', '#222222');       // near-black text
-    root.style.setProperty('--input-bg', '#ebeff3');         // light neutral input
-    root.style.setProperty('--result-bg', '#ffffff');        // clean content
-    root.style.setProperty('--textarea-text', '#222222');    // matching dark text
+    // Light Theme
+    root.style.setProperty('--bg-color', '#f5f7fa');
+    root.style.setProperty('--text-color', '#222222');
+    root.style.setProperty('--input-bg', '#ebeff3');
+    root.style.setProperty('--result-bg', '#ffffff');
+    root.style.setProperty('--textarea-text', '#222222');
     document.body.style.backgroundImage = "radial-gradient(circle at center, #f5f7fa, #dbe3ea)";
   } else {
-    // 🌑 Dark Theme (unchanged)
+    // Dark Theme
     root.style.setProperty('--bg-color', '#0f0f0f');
     root.style.setProperty('--text-color', '#f2f2f2');
     root.style.setProperty('--input-bg', '#1a1a1a');
@@ -74,6 +79,7 @@ function toggleTheme() {
     document.body.style.backgroundImage = "radial-gradient(circle at center, #0f0f0f 0%, #050505 100%)";
   }
 }
+
 
 
 // ✅ Voice greeting on page load based on time
