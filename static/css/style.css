@@ -107,3 +107,28 @@ button {
   visibility: visible;
   opacity: 1;
 }
+
+/* ✅ Tool Info Section */
+.tool-info {
+  background-color: var(--result-bg);
+  border-left: 4px solid var(--highlight-color);
+  padding: 20px;
+  margin: 30px auto;
+  width: 80%;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000030;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.tool-info h2,
+.tool-info h3 {
+  margin-top: 10px;
+  color: var(--highlight-color);
+}
+
+.tool-info p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
