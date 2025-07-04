@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from phishing import analyze_email
 from url_scan import scan_url
 from vuln_scan import scan_target
+import os
 
 app = Flask(__name__)
 
@@ -23,7 +24,7 @@ def analyze():
     else:
         return "Invalid tool selected."
 
-if __name__ == '__main__':
-    from waitress import serve
-    serve(app, host="0.0.0.0", port=8080)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
 
