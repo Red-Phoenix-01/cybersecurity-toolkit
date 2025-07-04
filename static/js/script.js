@@ -83,3 +83,34 @@ window.onload = function () {
 
   speakResult(`${timeGreeting}, welcome to the Cybersecurity Toolkit. Let's get started.`);
 };
+
+
+function updatePlaceholder() {
+  const tool = document.getElementById("tool").value;
+  const inputBox = document.getElementById("inputBox");
+
+  if (tool === "phishing") {
+    inputBox.placeholder = "e.g. 'We detected unusual activity on your account. Click here to verify now.'";
+  } else if (tool === "url") {
+    inputBox.placeholder = "e.g. 'https://bit.ly/secure-login'";
+  } else if (tool === "vuln") {
+    inputBox.placeholder = "e.g. 'example.com' or '192.168.0.1'";
+  } else {
+    inputBox.placeholder = "Paste input here...";
+  }
+}
+
+// ✅ Run this when the page loads
+window.onload = function () {
+  updatePlaceholder();
+
+  // (Optional: Keep your voice greeting here too)
+  const hour = new Date().getHours();
+  let timeGreeting = "Hello";
+
+  if (hour < 12) timeGreeting = "Good morning";
+  else if (hour < 18) timeGreeting = "Good afternoon";
+  else timeGreeting = "Good evening";
+
+  speakResult(`${timeGreeting}, welcome to the Cybersecurity Toolkit. Let's get started.`);
+};
