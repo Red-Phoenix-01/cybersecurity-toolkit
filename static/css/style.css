@@ -83,13 +83,13 @@ button {
   right: 20px;
 }
 
-.toggle-container button {
-  transition: transform 0.3s ease;
+.toggle-icon {
+  display: inline-block;
+  transition: transform 0.4s ease;
 }
 
-/* 🔁 Add animation when toggling */
-.toggle-container button.animate-toggle {
-  animation: rotateIcon 0.5s ease;
+.toggle-icon.spin {
+  animation: rotateIcon 0.6s ease;
 }
 
 @keyframes rotateIcon {
@@ -97,6 +97,7 @@ button {
   50%  { transform: rotate(180deg); }
   100% { transform: rotate(360deg); }
 }
+
 
 .tooltip {
   position: relative;
