@@ -18,7 +18,7 @@ Built with ❤️ using Python, Flak, HTML, CSS, and JavaScript.
 
 ## 🚀 Live Demo
 
-[🔗 Try the app](https://cybersecurity-toolkit-production.up.railway.app/)
+[🔗 Try the app](https://redphoenix01.pythonanywhere.com)
 
 ✅ Always-on  
 💬Voice-Enabled
